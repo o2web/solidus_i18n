@@ -4,6 +4,6 @@ module SolidusI18n
     #
     #   Set locales that should be available for end users (not used anymore excepts for helpers used by solidus_globalize)
     #
-    preference :available_locales, :array, default: [:en]
+    preference :available_locales, :array, default: Rails.application.config.i18n.available_locales
   end
 end
