@@ -3,13 +3,6 @@ module SolidusI18n
     class InstallGenerator < Rails::Generators::Base
       class_option :auto_run_migrations, type: :boolean, default: true
 
-      def add_javascripts
-        append_file 'vendor/assets/javascripts/spree/backend/all.js',
-          "//= require spree/backend/solidus_i18n\n"
-        append_file 'vendor/assets/javascripts/spree/frontend/all.js',
-          "//= require spree/frontend/solidus_i18n\n"
-      end
-
       def add_migrations
         run 'bin/rake solidus_i18n:install:migrations'
       end
