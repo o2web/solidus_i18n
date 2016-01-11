@@ -4,6 +4,6 @@ module SolidusI18n
     #
     #   Set locales that should be available for end users
     #
-    preference :available_locales, :array, default: I18n.available_locales
+    preference :available_locales, :array, default: [:en]
   end
 end
